@@ -23,6 +23,7 @@ string get_string(string msg){
 			size+=1;
 			str = (char*) realloc(str, size*sizeof(char));
 			if (str == NULL) {
+			free(str);
                 printf("Memory allocation failed!\n");
                 exit(1);
             }
